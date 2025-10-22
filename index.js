@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const result=document.querySelector(".endres")
     let timer = null;
     //             ↓この値が分を管理
-    let timeLeft = 5 * 60;
+    let timeLeft = 1 * 20;
 
     function updateDisplay() {
         const minutes = String(Math.floor(timeLeft / 60)).padStart(2, '0');
@@ -127,6 +127,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     clearInterval(timer);
                     timer = null;
+                    const sound=document.querySelector(".sound")
+                    sound.play()
                     startStopBtn.textContent = 'スタート';
                     if(A>B){
                         result.textContent=`${currentA}の勝ち`
@@ -167,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
             timer = null;
         }
         //         ↓ここで値が分を管理
-        timeLeft = 5 * 60;
+        timeLeft = 1 * 20;
         updateDisplay();
         startStopBtn.textContent = 'スタート';
     });

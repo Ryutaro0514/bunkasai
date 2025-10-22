@@ -4,17 +4,13 @@
     font-size: 150%;
 }
 
-body {
-    overflow: hidden;
-}
-
 .playall {
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 100vw;
     height: 100vh;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .scor {
@@ -69,7 +65,7 @@ body {
 }
 
 .reset {
-    width: 10%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,4 +118,7 @@ body {
     100% {
         background-position: 100% 0;
     }
+}
+.res{
+    width: 40%;
 }
