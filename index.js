@@ -1,12 +1,22 @@
 //全体をリロードしてリセット
 const btnreset = document.querySelector(".res")
 btnreset.addEventListener("click", () => {
-    location.reload()
-})
+  if (confirm("ゲームをやめますか？")) {
+    location.reload();
+  }
+});
 //名前Aを確定
 const addA = document.querySelector(".addA")
 const playerA = document.querySelector(".playerA")
 let inputA = document.querySelector(".inputA")
+const maxLen = 10;
+inputA.addEventListener('input', () => {
+  let val = inputA.value;
+  if (val.length > maxLen) {
+    inputA.value = val.slice(0, maxLen);
+  }
+});
+
 function styleA() {
     addA.style.display = "none"
     playerA.textContent = currentA
@@ -33,6 +43,12 @@ const addB = document.querySelector(".addB")
 const playerB = document.querySelector(".playerB")
 const inputB = document.querySelector(".inputB")
 let currentB = inputB.value
+inputB.addEventListener('input', () => {
+  let val = inputB.value;
+  if (val.length > maxLen) {
+    inputB.value = val.slice(0, maxLen);
+  }
+});
 function styleB() {
     addB.style.display = "none"
     playerB.textContent = currentB
