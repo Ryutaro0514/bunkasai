@@ -79,7 +79,7 @@ plusA.addEventListener("click", () => {
     scorA.textContent = `${A}点`
 })
 minusA.addEventListener("click", () => {
-    //if文で数値がマイナスにならないようにい条件分岐
+    //if文で数値がマイナスにならないように条件分岐
     if (A >= 1) {
         A -= 1
         scorA.textContent = `${A}点`
@@ -96,7 +96,7 @@ plusB.addEventListener("click", () => {
     scorB.textContent = `${B}点`
 })
 minusB.addEventListener("click", () => {
-    //if文で数値がマイナスにならないようにい条件分岐
+    //if文で数値がマイナスにならないように条件分岐
     if (B >= 1) {
         B -= 1
         scorB.textContent = `${B}点`
